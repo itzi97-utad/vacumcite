@@ -1,0 +1,242 @@
+% vim: set foldmethod=marker:
+% {{{ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment for UTAD
+% Structure Specification File
+% Version 1.0 (10/7/2020)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% Modified By:
+% Itziar Morales Rodríguez (itzimr97@outlook.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% }}} -----------------------------------------------------------------------------------
+% {{{ PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage[spanish]{babel} % Required for Spanish language
+
+\usepackage[x11names]{xcolor} % Some color names
+
+\usepackage{lastpage} % Required to determine the last page number for the footer
+
+\usepackage{graphicx} % Required to insert images
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\usepackage{listings} % Required for insertion of code
+
+\usepackage{etoolbox} % Required for if statements
+
+\usepackage{listings} % Code
+
+\usepackage[
+	section,
+	cache=true,
+	cachedir={\detokenize{~/.cache/minted}},
+	newfloat=false
+]{minted} % Better Code
+
+\usepackage{caption, subcaption} % Allows for more captions and sub-captions
+
+\usepackage[
+	colorlinks=true
+]{hyperref} % Required to allow links within TOC
+
+% }}} -----------------------------------------------------------------------------------
+%	{{{ MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{%
+	paper=a4paper, % Change to letterpaper for US letter
+	top=3cm,% Top margin
+	bottom=3cm,% Bottom margin
+	left=2.5cm,% Left margin
+	right=2.5cm, % Right margin
+	headheight=14pt, % Header height
+	footskip=1.4cm, % Space from the bottom margin to the baseline of the footer
+	headsep=1.2cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+% }}} -----------------------------------------------------------------------------------
+% {{{ FONT
+%----------------------------------------------------------------------------------------
+
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[sfdefault,light]{roboto} % Use the Roboto font
+
+% }}} -----------------------------------------------------------------------------------
+% {{{ HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customizing headers and footers
+
+\pagestyle{fancy} % Enable custom headers and footers
+
+\renewcommand\headrulewidth{0.5pt} % Thickness of the header rule
+
+\fancyhead{} % Clear default header
+\fancyfoot{} % Clear default footer
+
+\fancyhead[L]{%
+	\small\assignmentClass\ifdef{\assignmentClassInstructor}{%
+		\ (\assignmentClassInstructor)}} % Left header; output the instructor in brackets if set
+\fancyhead[C]{%
+	\includegraphics[height=0.85em, trim= 0 0 0 -1em]{assets/imgs/utad-logo.png}
+}
+\fancyhead[R]{\small\ifdef{%
+		\assignmentTitle}{\assignmentTitle}{%
+		\ifdef{\assignmentDueDate}{Due\ \assignmentDueDate}{}%
+	}} % Right header; output the author name if one was set, otherwise the due date if that was set
+
+\fancyfoot[L]{\small{\leftmark}}
+
+\fancyfoot[R]{
+	\small \textcolor{gray}{PÁGINA} \thepage\ | \pageref{LastPage}}% Número de página
+\renewcommand{\headrulewidth}{0.5pt}% 1pt header rule
+\renewcommand{\headrule}{\hbox to\headwidth{%
+		\color{DodgerBlue2}\leaders\hrule height\headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}% No footer rule
+
+\fancypagestyle{plain}{
+	\fancyhead[L]{%
+		\small\assignmentClass\ifdef{\assignmentClassInstructor}{%
+			\ (\assignmentClassInstructor)}} % Left header; output the instructor in brackets if set
+	\fancyhead[C]{%
+		\includegraphics[height=0.85em, trim= 0 0 0 -1em]{assets/imgs/utad-logo.png}
+	}
+	\fancyhead[R]{\small\ifdef{%
+			\assignmentTitle}{\assignmentTitle}{%
+			\ifdef{\assignmentDueDate}{Due\ \assignmentDueDate}{}%
+		}} % Right header; output the author name if one was set, otherwise the due date if that was set
+
+	\fancyfoot[L]{\small{\leftmark}}
+
+	\fancyfoot[R]{
+		\small \textcolor{gray}{PÁGINA} \thepage\ | \pageref{LastPage}}% Número de página
+	\renewcommand{\headrulewidth}{0.5pt}% 1pt header rule
+	\renewcommand{\headrule}{\hbox to\headwidth{%
+			\color{DodgerBlue2}\leaders\hrule height\headrulewidth\hfill}}
+	\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+
+\setlength{\headheight}{24pt} % Suppress warnings
+
+
+% }}} -----------------------------------------------------------------------------------
+% {{{ MODIFY PART, CHAPTER AND SECTION STYLES
+%----------------------------------------------------------------------------------------
+
+\usepackage{titlesec} % Required for modifying sections
+%\usepackage[Sonny]{fncychap} % Modified chapter style
+\usepackage{tikz}
+
+%------------------------------------------------
+% Part
+
+\titleformat%
+{\part} % command
+[display] % shape
+{\bfseries\huge\scshape} % format
+{
+	\center%
+	Parte\ \thepart
+} % label
+{0.5ex} % sep
+{
+	\center
+} % before-code
+[
+	\vspace{-0.5ex}%
+] % after-code
+
+%------------------------------------------------
+% Chapter
+
+\addto\captionsspanish{\renewcommand{\chaptername}{\assignmentChapterName}}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\titleformat%
+{\chapter} % command
+[hang] % shape
+{\LARGE\scshape} % format
+{\thechapter\ \ } % label
+{0.5ex} % sep
+{} % before-code
+[
+	\vspace{-0.5ex}%
+	\color{DodgerBlue1}\rule{\textwidth}{0.3pt}
+] % after-code
+
+\titlespacing{\chapter}{0pt}{-0.5cm}{1.5em}
+
+%------------------------------------------------
+% Section
+
+\titleformat%
+{\section} % command
+[hang] % shape
+{\bfseries\LARGE} % format
+{\thesection\ \ } % label
+{0.5ex} % sep
+{} % before-code
+[] % after-code
+
+
+%------------------------------------------------
+% SubSection
+
+\titleformat%
+{\subsection} % command
+[hang] % shape
+{\bfseries\Large} % format
+{\thesubsection\ \ } % label
+{0.5ex} % sep
+{} % before-code
+[] % after-code
+
+%------------------------------------------------
+% SubSubSection
+
+\titleformat%
+{\subsubsection}
+[hang]
+{\bfseries\large}
+{\thesubsubsection\ \ }
+{0.5ex}
+{}
+[]
+
+% }}} -----------------------------------------------------------------------------------
+% {{{ CODE FORMATTING
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\listingscaption}{Código Fuente}
+\renewcommand{\listoflistingscaption}{Listado de Viñetas de Código}
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\setminted{%
+	breakanywhere=true,
+	breakautoindent=true,
+	breaklines=true,
+	fontsize=\small,
+	mathescape=true,
+	numbersep=10pt,
+	linenos,
+	style={stata-light}
+}
+
+% }}} -----------------------------------------------------------------------------------

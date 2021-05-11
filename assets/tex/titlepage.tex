@@ -1,0 +1,27 @@
+\begin{titlepage}
+	\thispagestyle{empty}
+	\centering
+	\includegraphics[width=0.15\textwidth]{assets/imgs/utad-logo.png}\par\vspace{1cm}
+	{\scshape\LARGE Universidad de Tecnología y Arte Digital \par}
+	\vspace{1cm}
+	{\scshape{\Large\assignmentClass\par}}
+	\vspace{1.5cm}
+	{\bfseries{\huge\assignmentTitle\par}}
+	\ifdef{\assignmentSubtitle}{\vspace{0.25cm}
+		{{\LARGE\assignmentSubtitle\par}}
+	}\\
+	\vspace{0.5cm}
+	\ifdef{\assignmentDueDate}{\scshape{\Large Fecha\ de\ entrega:\ \assignmentDueDate \par}}\\
+	\vspace{2cm}
+	\Large\itshape{\assignmentAuthorName \par}
+	\vfill
+	\ifdef{\assignmentClassInstructor}{Asignatura supervisada por:\par
+		\assignmentClassInstructor}
+
+	\vfill
+
+	% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+\newpage
+\thispagestyle{fancy}
