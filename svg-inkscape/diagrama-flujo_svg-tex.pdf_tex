@@ -1,0 +1,93 @@
+%% Creator: Inkscape 1.0.2 (e86c870879, 2021-01-15), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'diagrama-flujo_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{331.34341049bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.86699325)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.25577693,0.82844563){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Login\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.25577693,0.68358082){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Logueado\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.43685794,0.76054025){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.28293908,0.59756734){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.55003357,0.50929035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Nacimento\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.25577693,0.50929035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Comprobacion cita\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.40743228,0.52966196){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.88276993,0.50929035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Centro Médico\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.88276993,0.36216202){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Asignación de cita\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.88276993,0.19918911){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Cambiar hora\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.90540506,0.10638509){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.88276993,0.03168918){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Elegir cita\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.65415515,0.1244932){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.47081063,0.03168918){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Entidad sanitaria\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.47081063,0.18560804){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Patologías\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.47081063,0.34858095){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Resumen\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.34631743,0.4481755){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{diagrama-flujo_svg-tex.pdf}}%
+    \put(0.15844589,0.34858095){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Cancelar cita\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

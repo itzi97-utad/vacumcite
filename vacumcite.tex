@@ -27,6 +27,8 @@
 \input{assets/tex/structure.tex} % Include the file specifying the document structure and custom commands
 
 \usepackage{blindtext}
+\usepackage{svg}
+\usepackage[export]{adjustbox}
 
 % }}} -----------------------------------------------------------------------------------
 %	{{{ ASSIGNMENT INFORMATION
@@ -78,16 +80,40 @@
 
 \chapter{Diagrama de flujo}
 
+\begin{figure}[!ht]
+	\centering
+	\footnotesize
+	\includesvg[width=\textwidth]{./assets/imgs/diagrama-flujo.svg}
+	\normalsize
+	\caption{Diagrama de flujo}
+\end{figure}
+
+\begin{itemize}
+	\item En el wireframe de \textbf{nacimiento}, el usuario introduce la fecha de nacimiento y en un cuadrado debajo
+	      aparece la información de la vacuna que va a recibir. Al aceptar e indicar su consentimiento a recibir tal
+	      vacuna, se dirige al wireframe donde se elige el centro médico.
+	\item En los wireframes de \textbf{centro médico}, \textbf{asignación de cita}, \textbf{asignación de cita},
+	      \textbf{entidad sanitaria} y \textbf{patología}, el usuario tiene la opción de volver con un botón de volver
+	      hacia atrás.
+	\item En el wireframe de \textbf{patologías}, el usuario tiene la opción de elegir las patologías que sufre y
+	      luego de elegir, en una caja debajo aparece la información asociada a cada patología, la cual el paciente debe
+	      estar de acuerdo en las dificultades que pueden suponer.
+	\item En el wireframe de \textbf{resumen}, se ofrece un resumen detallado de la cita donde el paciente puede
+	      imprimir la información, y también puede cancelar su cita.
+\end{itemize}
+
 \par
-
-
-% }}} -----------------------------------------------------------------------------------
-% {{{ WIREFRAMES DE BAJA FIDELIDAD
-%----------------------------------------------------------------------------------------
-
-\chapter{Wireframes de baja fidelidad}
-
+Se llegó a este diseño para el diagrama de flujo debido al diseño de Jorge, el cual era simplista con rombos y cuadrados
+los cuales detallaban decisiones a tomar por el usuario y estados de la aplicación. Itziar propuso que el mismo estado
+de la información de la cita se presentase tanto como para un usuario que acabe de rellenar la información disponible,
+como para un usuario que acabe de loguearse a la web. Raul propuso que en cuanto al wireframe de las patologías, se
+ofrezca la opción de indicar que el paciente no sufre de patologías lo cual facilita el transito al siguiente wireframe,
+y Jaime propuso que en cuanto a asignación de cita se detallen dos wireframes por separado por el motivo de que en
+Madrid al ser una comunidad grande, muchas horas no serían disponibles al haber muchos pacientes decidiendo elegir la
+misma hora, y por lo tanto debe haber dos wireframes para verificar la hora de una cita.
 \par
+Los wireframes que se habían hecho de manera individual eran bastante similares, por lo tanto el flujo de la aplicación
+final fue muy similar al de los 4 individuales excepto por cambios detallados anteriormente.
 
 
 % }}} -----------------------------------------------------------------------------------
@@ -96,7 +122,148 @@
 
 \chapter{Wireframes de alta fidelidad}
 
+\section{Inicio de sesión}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=1, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: Inicio de sesión}
+\end{figure}
+
 \par
+Jorge propuso de poner el logo de la página \textbf{VacumCite} arriba a la izquierda de la página, mientras que Itziar
+propuso de dejar una barra en la parte superior de la página con los datos de vacunación actuales. Esta barra se
+mostrará en los wireframes posteriores. El diseño de inicio de sesión está basado bastante del wireframe de baja
+fidelidad de Itziar excepto en cuanto a la caja de recordar, la cual propuso Jaime para que un usuario no tenga que
+loguearse varias veces si ya se ha logueado antes. Se hizo esta página de tal manera que:
+
+\begin{itemize}
+	\item Los \textit{placeholders} indican instrucciones al usuario para que tipo de datos rellenar.
+	\item Los campos están indicados al lado del input de manera que confunden menos al usuario.
+	\item El formulario a rellenar está en centro de pantalla lo cual indica simplicidad.
+\end{itemize}
+
+\newpage
+
+\section{Introducción fecha de nacimiento}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=2, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: fecha de nacimiento}
+\end{figure}
+
+\par
+Itziar propuso de que haya una caja con datos de la vacuna los cuales se muestran de manera dinámica a medida que el
+usuario vaya introduciendo su edad. La edad, se introduce de manera que cada campo corresponde a día, mes y año, de tal
+manera que lleva a menos error como propuso Jorge. Por último, Raul propuso de que en la misma página de seleccionar la
+fecha de nacimiento, haya una caja a rellenar donde el usuario debe estar de acuerdo de que va a coger una cita para su
+vacunación para poder proseguir a la siguiente página.
+
+\newpage
+
+\section{Selección de centro médico}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=3, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: centro médico}
+\end{figure}
+\par
+La selección de centro médico está basada en gran medida en la página de Jaime, la cual ofrece una interfaz intuitiva y
+fácil de navegar para seleccionar un hospital. Se ofrece una lista de 5 hospitales en cada lado de la página, junto a su
+nombre y dirección (y un minimapa de donde está localizado).
+
+\newpage
+
+\section{Selección de cita}
+
+\subsection{Selección de hora}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=5, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: selección de hora}
+\end{figure}
+
+\par
+El diseño es similar al del wireframe de Itziar donde es intuitivo ya que se muestran las cuatro opciones en la portada
+de la página.
+
+\newpage
+
+\subsection{Selección de día}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, fbox]{./assets/imgs/wire-calendario.pdf}
+	\caption{Wireframe: selección de día}
+\end{figure}
+
+\par
+El calendario fue del wireframe básico de Jaime en el cual se indican los días que el paciente puede elegir que estén
+disponibles, y los que no están en gris.
+
+\newpage
+
+\section{Formulario de entidad sanitaria}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=4, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: entidad sanitaria}
+\end{figure}
+
+\par
+Del formulario de entidad sanitaria, se tomó mucho en cuenta del wireframe de Jorge donde se podía introducir el número
+de seguridad social además de seleccionar los campos para las respectivas entidades sanitarias privadas y públicas que
+elija el paciente (con el campo opcional si elige entidad sanitaria privada).
+
+\newpage
+
+\section{Formulario de patologías}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=9, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: entidad sanitaria}
+\end{figure}
+
+\par
+No se llegó a ninguna conclusión respecto a los wireframes individuales por lo que se realizó un diseño de wireframe
+nuevo en el cual el usuario puede seleccionar de una lista de patologías con scroll varias y luego se le muestre un
+mensaje informándole sobre los diferentes efectos que puedan tener estas patologías sobre su vacunación.
+
+\newpage
+
+\section{Resumen de cita}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=7, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: entidad sanitaria}
+\end{figure}
+
+\par
+El resumen de cita se tomó mucho en cuenta del wireframe de Jorge donde los datos y los campos de información estaban
+mostrados de manera clara y concisa, además de que los botones para cancelar e imprimir se mostraban de manera
+intuitiva. Se incluye como siempre la barra de datos de vacunación arriba.
+
+\newpage
+
+\section{Cancelación de cita}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=.98\textwidth, page=8, fbox]{./assets/imgs/wire.pdf}
+	\caption{Wireframe: entidad sanitaria}
+\end{figure}
+
+\par
+Para cancelar cita, se muestra un campo resumido donde el usuario puede introducir el motivo de cancelación, así
+informandose al paciente de que una cancelación puede producirle un retraso en el horario de citas. Se tomó en cuenta el
+diseño de Jorge para esto, y se debatió si incluir una lista de opciones a elegir pero se acabó descartando a favor de
+una caja de texto más grande.
 
 
 % }}} -----------------------------------------------------------------------------------
