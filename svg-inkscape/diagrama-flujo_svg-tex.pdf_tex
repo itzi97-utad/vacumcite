@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{331.34341049bp}%
+    \setlength{\unitlength}{331.32091049bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,44 +50,44 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.86699325)%
+  \begin{picture}(1,0.86705213)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.25577693,0.82844563){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Login\end{tabular}}}}%
+    \put(0.25572639,0.82850189){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Login\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.25577693,0.68358082){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Logueado\end{tabular}}}}%
+    \put(0.25572639,0.68362724){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Logueado\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.43685794,0.76054025){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
+    \put(0.4368197,0.7605919){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.28293908,0.59756734){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
+    \put(0.28289039,0.59760792){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.55003357,0.50929035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Nacimento\end{tabular}}}}%
+    \put(0.55000302,0.50932493){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Nacimento\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.25577693,0.50929035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Comprobacion cita\end{tabular}}}}%
+    \put(0.25572639,0.50932493){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Comprobacion cita\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.40743228,0.52966196){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
+    \put(0.40739204,0.52969793){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.88276993,0.50929035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Centro Médico\end{tabular}}}}%
+    \put(0.88276197,0.50932493){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Centro Médico\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.88276993,0.36216202){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Asignación de cita\end{tabular}}}}%
+    \put(0.88276197,0.36218662){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Asignación de hora\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.88276993,0.19918911){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Cambiar hora\end{tabular}}}}%
+    \put(0.88276197,0.19920264){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Cambiar cita\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.90540506,0.10638509){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
+    \put(0.90539863,0.10639232){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.88276993,0.03168918){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Elegir cita\end{tabular}}}}%
+    \put(0.88276197,0.03169133){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Elegir fecha\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.65415515,0.1244932){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
+    \put(0.65413167,0.12450165){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}no\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.47081063,0.03168918){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Entidad sanitaria\end{tabular}}}}%
+    \put(0.47077469,0.03169133){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Entidad sanitaria\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=15]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.47081063,0.18560804){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Patologías\end{tabular}}}}%
+    \put(0.47077469,0.18562064){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Patologías\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=16]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.47081063,0.34858095){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Resumen\end{tabular}}}}%
+    \put(0.47077469,0.34860462){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Resumen\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=17]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.34631743,0.4481755){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
+    \put(0.34627304,0.44820594){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}si\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=18]{diagrama-flujo_svg-tex.pdf}}%
-    \put(0.15844589,0.34858095){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Cancelar cita\end{tabular}}}}%
+    \put(0.15838874,0.34860462){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Cancelar cita\end{tabular}}}}%
   \end{picture}%
 \endgroup%
