@@ -28,7 +28,15 @@
 
 \usepackage{blindtext}
 \usepackage{svg}
+\usepackage{pgf-pie}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepgfplotslibrary{statistics}
 \usepackage[export]{adjustbox}
+\usepackage{siunitx} % Formats the units and values
+\usepackage{pgfplotstable} % Generates table from .csv
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{dirtytalk}
 
 % }}} -----------------------------------------------------------------------------------
 %	{{{ ASSIGNMENT INFORMATION
@@ -404,6 +412,342 @@ de patologías con una sección de compra (debido al icono de carrito en el wire
 
 \par
 Se muestra la cancelación de cita en rojo para indicar la severidad de la acción que está realizando el usuario.
+
+% }}} -----------------------------------------------------------------------------------
+% {{{ VALIDACIÓN
+%----------------------------------------------------------------------------------------
+
+\chapter{Validación}
+
+\par
+Se realiza un estudio utilizando el sistema de escalas de usabilidad.
+
+\section{Demografía del estudio}
+\par
+La demografía social del conjunto se puede dar por las gráficas de la figura~\ref{fig:socio}, donde se puede ver que de
+entre las 22 personas encuestadas, casi la mitad eran hombres y algo más de la mitad eran mujeres, mientras que el rango
+de edad era de adultos de mediana edad (50 años), con gente de entre los 18 años de mínimo a 60 años de máximo.
+
+\begin{figure}[!ht]
+	\begin{subfigure}{.49\textwidth}
+		\begin{tikzpicture}
+			\pie[sum=auto, explode=0.1, text=legend, radius=2]{
+				10/Hombres, 12/Mujeres
+			}
+		\end{tikzpicture}
+		\subcaption{sexo}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.49\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}
+				[
+					ytick={},
+					y=1.5cm,
+					width=\textwidth,
+					yticklabels={},
+					xlabel={edad}
+				]
+				\addplot+[
+					boxplot prepared={
+							median=50,
+							upper quartile=55,
+							lower quartile=24,
+							upper whisker=86,
+							lower whisker=12,
+							box extend=2,  % height of box
+							whisker extend=2.2, % height of whiskers
+							every box/.style={dashed,draw=DodgerBlue4,fill=DodgerBlue1!20},
+							every whisker/.style={DodgerBlue4, ultra thick},
+							every median/.style={densely dotted,DodgerBlue4,ultra thick}
+						},
+					draw=DodgerBlue4
+				] coordinates {};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{edad}
+	\end{subfigure}
+	\caption{Estadísticas demográficas}
+	\label{fig:socio}
+\end{figure}
+
+\par
+Un posible factor a tener en cuenta en cuanto al estudio demográfico es el de que la mayoría de personas encuestadas
+pertenecen a la clase media, por lo que tendrán un mayor grado de conocimiento de la tecnología y por lo tanto las
+opiniones serán algo más favorables que de lo normal.
+
+\section{Escalas de usabilidad}
+
+\par
+Primer dato a tomar en cuenta en cuanto a la figura~\ref{fig:usabilidad} donde se muestran todas las preguntas del
+estudio de usabilidad (donde 1 significa en total desacuerdo, mientras que 5 significa en total acuerdo), es que en la
+pregunta~\ref{fig:usabilidad.a}, no se puede valorar muy bien la respuesta debido a que VacumCite se supone que es una
+web la cual se debería utilizar solo una vez.
+\par
+Otra pregunta a tomar en cuenta donde hubo desacuerdo, es la pregunta~\ref{fig:usabilidad.e}, donde muchos usuarios
+pensaron que las funciones de VacumCite no estaban bien integradas, esto se puede deber seguramente a algún mecanismo de
+la página la cual no esté clara o no esté bien indicada.
+\par
+En general, la encuesta revela que los usuarios encuentra la web fácil e intuitiva de utilizar, sin mucha complegidad,
+excepto por un comentario de usuario el cual comentó:
+\say{No creo que sea necesario indicar el nº de personas
+	vacunadas ya que no tiene relación directa con el tema particular}. Igual es debido a que se muestra en todas las
+páginas, e igual sería mostrarlo mejor sólo en la página de logueo por ejemplo.
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					ymax=22,
+					xtick=data,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,1) (2,2) (3,1) (4,6) (5,12)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Creo que usaría VacumCite frecuentemente}
+		\label{fig:usabilidad.a}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,16) (2,2) (3,0) (4,3) (5,1)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Encuentro VacumCite innecesariamente complejo}
+		\label{fig:usabilidad.b}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,0) (2,0) (3,1) (4,4) (5,17)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Creo que VacumCite fue fácil de usar}
+		\label{fig:usabilidad.c}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					ymax=22,
+					xtick=data,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,15) (2,3) (3,3) (4,0) (5,1)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Creo que necesitaría ayuda de una persona con conocimientos técnicos para usar VacumCite}
+		\label{fig:usabilidad.d}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,0) (2,9) (3,0) (4,5) (5,17)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Las funciones de VacumCite están bien integradas}
+		\label{fig:usabilidad.e}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,18) (2,2) (3,1) (4,1) (5,0)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Creo que VacumCite es muy inconsistente}
+		\label{fig:usabilidad.f}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					ymax=22,
+					xtick=data,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,0) (2,1) (3,0) (4,8) (5,13)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Imagino que la mayoria de la gente aprendería a usar VacumCite de forma muy rápida}
+		\label{fig:usabilidad.g}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,19) (2,3) (3,0) (4,0) (5,0)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Encuentro que VacumCite es muy difícil de usar}
+		\label{fig:usabilidad.h}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,0) (2,1) (3,0) (4,5) (5,16)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Me siento confiado al usar VacumCite}
+		\label{fig:usabilidad.i}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{.32\textwidth}
+		\begin{tikzpicture}
+			\begin{axis}[
+					%width=\textwdith,
+					%every axis plot post/.style={/pgf/number format/fixed},
+					height=5cm,
+					ybar=5pt,
+					bar width=12pt,
+					x=20pt,
+					ymin=0,
+					axis on top,
+					xtick=data,
+					ymax=22,
+					%enlarge x limits=0.2,
+					symbolic x coords={1,2,3,4,5},
+					axis lines*=left,
+					clip=false
+				]
+				\addplot coordinates {(1,18) (2,3) (3,1) (4,0) (5,0)};
+			\end{axis}
+		\end{tikzpicture}
+		\subcaption{Me siento confiado al usar VacumCite}
+		\label{fig:usabilidad.j}
+	\end{subfigure}
+	\caption{Escalas de usabilidad (1: en total desacuerdo, 5: en total acuerdo)}
+	\label{fig:usabilidad}
+\end{figure}
 
 % }}} -----------------------------------------------------------------------------------
 
